@@ -1,89 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Disney Princess Quiz</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-	<title>Personality Quiz Starter Code</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
 
-	<!-- import the webpage's stylesheet -->
-	<link rel="stylesheet" href="/style.css">
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
 
-	<!-- import the webpage's javascript file -->
-	<script src="/script.js" defer>
+  <body>
+    <header>
+      <h1>Disney Princess Quiz</h1>
+      <p>Take this quiz to determine which Disney Princess you are!</p>
+    </header>
 
-	</script>
-</head>
-
-<body>
-
-	<header>
-		<h1>Name of Your Quiz!</h1>
-		<p>Add any instructions here.</p>
-	</header>
-
-	<main>
-
-		<h2>What is your first question?</h2>
-		<div class="question">
-
-			<div class="answer-choice">
-				<img src="assets/cat.jpg" alt="A striped black and white cat sitting upright with folded arms">
-        <br>
-        <button id="q1a1">Question 1 Answer 1</button>
+    <main>
+      <h2>1. If you were a type of jewel, what jewel would you be?</h2>
+      <div class="question">
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Pearl" />
+          <br />
+          <button id="q1a1">
+            A. Pearl<br />(Mysterious, linked to the sea, symbol of curiosity)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Ruby" />
+          <br />
+          <button id="q1a2">
+            B. Ruby<br />(Fierce, passionate, warrior spirit)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Sapphire" />
+          <br />
+          <button id="q1a3">
+            C. Sapphire<br />(Wisdom, deep thinker, calm and loyal)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Emerald" />
+          <br />
+          <button id="q1a4">
+            D. Emerald<br />(Grounded, hardworking, vibrant energy)
+          </button>
+        </div>
       </div>
 
-      <div class="answer-choice">
-        <img src="assets/cat.jpg" alt="A striped black and white cat sitting upright with folded arms">
-        <br>
-        <button id="q1a2">Question 1 Answer 2</button>
+      <h2>2. Ideal weekend activity?</h2>
+      <div class="question">
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Exploring" />
+          <br />
+          <button id="q2a1">
+            A. Exploring a hidden cave or beach<br />(Adventurous, loves
+            discovery)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Reading" />
+          <br />
+          <button id="q2a2">
+            B. Reading in a cozy library or café<br />(Intellectual stimulation,
+            quiet joy)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Training" />
+          <br />
+          <button id="q2a3">
+            C. Training, hiking, or martial arts<br />(Strength,
+            self-improvement, nature)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Cooking" />
+          <br />
+          <button id="q2a4">
+            D. Cooking brunch and working on a side hustle<br />(Ambitious,
+            organized, creative energy)
+          </button>
+        </div>
       </div>
 
-    </div> 
-    
-    <h2>What is your second question?</h2>
-    <div class="question">
-
-      <div class="answer-choice">
-        <img src="assets/cat.jpg" alt="A striped black and white cat sitting upright with folded arms">
-        <br>
-        <button id="q2a1">Question 2 Answer 1</button>
+      <h2>3. You’ve been asked to do chores – what’s your reaction?</h2>
+      <div class="question">
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Distracted" />
+          <br />
+          <button id="q3a1">
+            A. "I’ll do it... after I check out this cool new thing I found."<br />(Easily
+            distracted, but good intentions)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Singing" />
+          <br />
+          <button id="q3a2">
+            B. "If I sing while I clean, it’ll go faster!"<br />(Optimistic,
+            practical romantic)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Efficient" />
+          <br />
+          <button id="q3a3">
+            C. "I’ll get it done quickly and efficiently."<br />(Disciplined,
+            responsible)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Hardworking" />
+          <br />
+          <button id="q3a4">
+            D. "Chores build character – let’s go!"<br />(Hardworking, sees the
+            value in it)
+          </button>
+        </div>
       </div>
 
-      <div class="answer-choice">
-        <img src="assets/cat.jpg" alt="A striped black and white cat sitting upright with folded arms">
-        <br>
-        <button id="q2a2">Question 2 Answer 2</button>
+      <h2>4. The most important quality I look for in a prince is:</h2>
+      <div class="question">
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Adventure" />
+          <br />
+          <button id="q4a1">
+            A. A sense of adventure and open-mindedness<br />(Wants someone who
+            embraces new worlds)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Intelligence" />
+          <br />
+          <button id="q4a2">
+            B. Intelligence and deep conversation<br />(Values brains and soul
+            more than looks)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Honor" />
+          <br />
+          <button id="q4a3">
+            C. Honor, courage, and reliability<br />(Needs someone to stand by
+            her side in battle and life)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Drive" />
+          <br />
+          <button id="q4a4">
+            D. Drive and shared goals<br />(Wants a partner who will build a
+            life with her)
+          </button>
+        </div>
       </div>
 
-    </div> 
-    
-    <h2>What is your third question?</h2>
-    <div class="question">
-
-      <div class="answer-choice">
-        <img src="assets/cat.jpg" alt="A striped black and white cat sitting upright with folded arms">
-        <br>
-        <button id="q3a1">Question 3 Answer 1</button>
+      <h2>5. Pick a Disney movie to watch with your closest friends:</h2>
+      <div class="question">
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Moana" />
+          <br />
+          <button id="q5a1">
+            A. Moana<br />(Ocean adventure, self-discovery, courage)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Beauty and the Beast" />
+          <br />
+          <button id="q5a2">
+            B. Beauty and the Beast<br />(Classic romance and depth)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="Raya" />
+          <br />
+          <button id="q5a3">
+            C. Raya and the Last Dragon<br />(Warrior journey, trust, loyalty)
+          </button>
+        </div>
+        <div class="answer-choice">
+          <img src="assets/cat.jpg" alt="The Princess and the Frog" />
+          <br />
+          <button id="q5a4">
+            D. The Princess and the Frog<br />(Hard work, dreams, and magic)
+          </button>
+        </div>
       </div>
 
-      <div class="answer-choice">
-        <img src="assets/cat.jpg" alt="A striped black and white cat sitting upright with folded arms">
-        <br>
-        <button id="q3a2">Question 3 Answer 2</button>
+      <div>
+        <button id="displayResult">What kind of a person am I?</button>
+        <h2 id="result">Your result is...</h2>
       </div>
-
-    </div> 
-    
-
-    <div>
-     <button id="displayResult">What kind of a person am I?</button>
-      <h2 id="result">Your result is...</h2>
-    </div>
-    <button id="restart">Restart</button>
-    
-    
-  </main>
+      <button id="restart">Restart</button>
+    </main>
   </body>
 </html>

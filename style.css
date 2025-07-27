@@ -6,12 +6,11 @@ body {
 
 /* STYLE TEXT */
 h1 {
-  font-style: italic;
   color: #0d9c90;
 }
 
 h2 {
-  margin-top: 2em; 
+  margin-top: 2em;
 }
 
 /* STYLE FLEX CONTAINER */
@@ -21,7 +20,7 @@ h2 {
   /* justify-content: center; */
   margin-top: 2em;
 }
-  
+
 /* STYLE FLEX ITEM */
 .answer-choice {
   margin: 5px;
@@ -33,6 +32,6 @@ h2 {
 }
 
 /* STYLE BUTTON */
-button { 
+button {
   margin-top: 5px;
 }

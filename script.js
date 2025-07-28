@@ -6,6 +6,8 @@ let scores = {
   belle: 0,
   tiana: 0,
 };
+
+let selectedAnswers = {};
 const result = document.getElementById("result");
 const displayResult = document.getElementById("displayResult");
 const restart = document.getElementById("restart");
@@ -24,14 +26,20 @@ function processAnswer(event) {
   //gets the question number from the class name
   const questionGroup = event.target.className;
   // if the score clicked has its own property (character) the character score and question count goes up
+  if (selectedAnswers[questionGroup]) {
+    const prevAnswer = selectedAnswers[questionGroup];
+    if (scores.hasOwnProperty(prevAnswer)) {
+      scores[prevAnswer]--;
+      questionCount--;
+    } else {
+      questionCount++;
+    }
+  }
   if (scores.hasOwnProperty(character)) {
     scores[character]++;
+    selectedAnswers[questionGroup] = character;
     questionCount++;
   }
-
-  document.querySelectorAll("." + questionGroup).forEach((button) => {
-    button.disabled = true;
-  });
 
   console.log(
     "Question " + questionCount + " answered. Current Scores:",
@@ -64,6 +72,7 @@ function restartQuiz() {
     scores[character] = 0;
   }
   questionCount = 0;
+  selectedAnswers = {};
 
   quizButtons.forEach((button) => {
     button.disabled = false;

@@ -43,6 +43,16 @@ main > header > h2 {
   font-size: 2.5rem;
 }
 
+main > header > .name-container > p > a {
+  text-decoration: dotted underline;
+  color: black;
+}
+
+main > header > .name-container > p > a:hover {
+  text-decoration: solid underline;
+  color: #e32;
+}
+
 .quiz-circle {
   width: 100px;
   height: 100px;
@@ -54,6 +64,18 @@ main > header > h2 {
   box-sizing: border-box;
 }
 
+.quiz-circle:hover {
+  animation: spin 3s linear infinite; /* Animates the rotation */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .quiz-text {
   transform: rotate(330deg);
   font-size: 32px;
@@ -170,4 +192,70 @@ main > h2 {
 
 #restart {
   box-shadow: 0 0 12px grey;
+}
+
+#shareResult {
+  margin-bottom: 2.5rem;
+  background: white;
+  background-color: rgb(92, 230, 214);
+  border: 3px rgb(92, 230, 214);
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  color: rgb(16, 16, 79);
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 120px;
+  }
+
+  main > h2 {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .question {
+    width: 100%;
+    gap: 0.5em;
+  }
+
+  .answer-choice {
+    width: calc(50% - 0.25em);
+  }
+
+  .answer-choice img {
+    height: auto;
+    max-height: 8em;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  nav h1 {
+    font-size: 1.2rem;
+    margin: 1em;
+  }
+
+  main > h2 {
+    font-size: 1.5rem;
+  }
+
+  .answer-choice {
+    width: calc(50% - 0.25em);
+  }
+
+  .answer-choice img {
+    max-height: 6em;
+  }
 }

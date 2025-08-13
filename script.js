@@ -9,40 +9,57 @@ let scores = {
 
 let selectedAnswers = {};
 const result = document.getElementById("result");
+const resultDescription = document.getElementById("resultDescription");
 const displayResult = document.getElementById("displayResult");
 const restart = document.getElementById("restart");
 const quizButtons = document.querySelectorAll(".question button");
+const share = document.getElementById("shareResult");
+share.style.display = "none";
 
 displayResult.addEventListener("click", showResult);
 restart.addEventListener("click", restartQuiz);
+share.addEventListener("click", shareResult);
 
 quizButtons.forEach((button) => {
   button.addEventListener("click", processAnswer);
 });
 
 function processAnswer(event) {
-  //gets character from data
-  const character = event.target.dataset.character;
-  //gets the question number from the class name
-  const questionGroup = event.target.className;
-  // if the score clicked has its own property (character) the character score and question count goes up
+  const button = event.target.closest("button");
+  const character = button.dataset.character;
+  const classList = Array.from(button.classList);
+  const questionGroup = classList.find((cls) => /^q\d+$/.test(cls));
+  if (!questionGroup) return;
+
   if (selectedAnswers[questionGroup]) {
-    const prevAnswer = selectedAnswers[questionGroup];
-    if (scores.hasOwnProperty(prevAnswer)) {
-      scores[prevAnswer]--;
-      questionCount--;
-    } else {
-      questionCount++;
+    const prevCharacter = selectedAnswers[questionGroup];
+    if (prevCharacter === character) return;
+    if (scores.hasOwnProperty(prevCharacter)) {
+      scores[prevCharacter]--;
     }
-  }
-  if (scores.hasOwnProperty(character)) {
-    scores[character]++;
-    selectedAnswers[questionGroup] = character;
+  } else {
     questionCount++;
   }
 
+  scores[character]++;
+  selectedAnswers[questionGroup] = character;
+
+  const questionChoices = document.querySelectorAll(
+    `.answer-choice.${questionGroup}`
+  );
+  questionChoices.forEach((btn) => {
+    btn.classList.remove("selected", "blurred");
+  });
+
+  button.classList.add("selected");
+  questionChoices.forEach((btn) => {
+    if (btn !== button) {
+      btn.classList.add("blurred");
+    }
+  });
+
   console.log(
-    "Question " + questionCount + " answered. Current Scores:",
+    "Question " + questionGroup + " answered. Current Scores:",
     scores
   );
 }
@@ -53,6 +70,8 @@ function showResult() {
 
   if (questionCount < 5) {
     result.innerHTML = "You haven't answered all the questions!";
+    result.style.display = "block";
+    resultDescription.style.display = "none";
     return;
   }
 
@@ -65,6 +84,11 @@ function showResult() {
   const capitalizedWinner =
     resultCharacter.charAt(0).toUpperCase() + resultCharacter.slice(1);
   result.innerHTML = `You are a ${capitalizedWinner} person!`;
+  result.style.display = "block";
+  resultDescription.style.display = "block";
+
+  share.dataset.winner = capitalizedWinner;
+  share.style.display = "inline-block";
 }
 
 function restartQuiz() {
@@ -75,8 +99,24 @@ function restartQuiz() {
   selectedAnswers = {};
 
   quizButtons.forEach((button) => {
-    button.disabled = false;
+    button.classList.remove("selected", "blurred");
   });
   result.innerHTML = "Your result is...";
+  result.style.display = "none";
+  resultDescription.style.display = "none";
   console.log("Quiz restarted. Scores reset.");
+}
+
+async function shareResult() {
+  const winner = share.dataset.winner || "";
+  try {
+    await navigator.share({
+      title: "Disney Princess Quiz",
+      url: "https://example.com",
+      text: `I took this Disney Princess Quiz and I'm most like ${winner}!`,
+    });
+    console.log("Shared successfully");
+  } catch (err) {
+    console.error("Share failed:", err);
+  }
 }

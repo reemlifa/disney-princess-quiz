@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="/script.js" defer></script>
   </head>
 
@@ -25,165 +31,125 @@
         </h2>
         <p>These are some tough choices, fellow princesses.</p>
         <div class="name-container">
-          <img src="assets/cat.jpg" />
-          <p>by <a href="reemkhalifa.xyz>">Reem Khalifa</a></p>
+          <img src="assets/reem.jpeg" />
+          <p>by <a href="https://reemkhalifa.xyz">Reem Khalifa</a></p>
         </div>
       </header>
 
-      <h2>1. If you were a type of jewel, what jewel would you be?</h2>
+      <h2>If you were a type of jewel, what jewel would you be?</h2>
       <div class="question">
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Pearl" />
-          <button id="q1a1" class="q1" data-character="ariel">
-            A. Pearl (Mysterious, linked to the sea, symbol of curiosity)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Ruby" />
-          <button id="q1a2" class="q1" data-character="mulan">
-            B. Ruby (Fierce, passionate, warrior spirit)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Sapphire" />
-          <button id="q1a3" class="q1" data-character="belle">
-            C. Sapphire (Wisdom, deep thinker, calm and loyal)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Emerald" />
-          <button id="q1a4" class="q1" data-character="tiana">
-            D. Emerald (Grounded, hardworking, vibrant energy)
-          </button>
-        </div>
+        <button class="answer-choice q1" id="q1a1" data-character="ariel">
+          <img src="assets/pearl.jpg" alt="Pearl" />
+          <span>Pearl</span>
+        </button>
+        <button class="answer-choice q1" id="q1a2" data-character="mulan">
+          <img src="assets/ruby.jpg" alt="Ruby" />
+          <span>Ruby</span>
+        </button>
+        <button class="answer-choice q1" id="q1a3" data-character="belle">
+          <img src="assets/sapphire.jpg" alt="Sapphire" />
+          <span>Sapphire</span>
+        </button>
+        <button class="answer-choice q1" id="q1a4" data-character="tiana">
+          <img src="assets/emerald.jpg" alt="Emerald" />
+          <span>Emerald</span>
+        </button>
       </div>
 
-      <h2>2. Ideal weekend activity?</h2>
+      <h2>What's your ideal weekend activity?</h2>
       <div class="question">
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Exploring" />
-          <button id="q2a1" class="q2" data-character="ariel">
-            A. Exploring a hidden cave or beach (Adventurous, loves discovery)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Reading" />
-          <button id="q2a2" class="q2" data-character="belle">
-            B. Reading in a cozy library or café (Intellectual stimulation,
-            quiet joy)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Training" />
-          <button id="q2a3" class="q2" data-character="mulan">
-            C. Training, hiking, or martial arts (Strength, self-improvement,
-            nature)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Cooking" />
-          <button id="q2a4" class="q2" data-character="tiana">
-            D. Cooking brunch and working on a side hustle (Ambitious,
-            organized, creative energy)
-          </button>
-        </div>
+        <button class="answer-choice q2" id="q2a1" data-character="ariel">
+          <img src="assets/beach.gif" alt="Beach" />
+          <span> Exploring the beach or sea</span>
+        </button>
+        <button class="answer-choice q2" id="q2a2" data-character="mulan">
+          <img src="assets/hike.gif" alt="Adventure" />
+          <span> Training, hiking, or adventure</span>
+        </button>
+        <button class="answer-choice q2" id="q2a3" data-character="belle">
+          <img src="assets/reading.gif" alt="Reading" />
+          <span> Reading a book in a cozy nook</span>
+        </button>
+        <button class="answer-choice q2" id="q2a4" data-character="tiana">
+          <img src="assets/cooking.gif" alt="Cooking" />
+          <span> Cooking or working on a side hustle</span>
+        </button>
       </div>
 
-      <h2>3. You’ve been asked to do chores – what’s your reaction?</h2>
+      <h2>Pick a quote that speaks to you</h2>
       <div class="question">
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Distracted" />
-          <button id="q3a1" class="q3" data-character="ariel">
-            A. "I’ll do it... after I check out this cool new thing I found."
-            (Easily distracted, but good intentions)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Singing" />
-          <button id="q3a2" class="q3" data-character="belle">
-            B. "If I sing while I clean, it’ll go faster!" (Optimistic,
-            practical romantic)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Efficient" />
-          <button id="q3a3" class="q3" data-character="mulan">
-            C. "I’ll get it done quickly and efficiently." (Disciplined,
-            responsible)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Hardworking" />
-          <button id="q3a4" class="q3" data-character="tiana">
-            D. "Chores build character – let’s go!" (Hardworking, sees the value
-            in it)
-          </button>
-        </div>
+        <button class="answer-choice q3" id="q3a1" data-character="ariel">
+          <img src="assets/people.gif" alt="Quote" />
+          <span>“I want to be where the people are.”</span>
+        </button>
+        <button class="answer-choice q3" id="q3a2" data-character="mulan">
+          <img src="assets/flower.gif" alt="Quote" />
+          <span
+            >“The flower that blooms in adversity is the most rare and beautiful
+            of all.”</span
+          >
+        </button>
+        <button class="answer-choice q3" id="q3a3" data-character="belle">
+          <img src="assets/adventure.gif" alt="Quote" />
+          <span>“I want adventure in the great wide somewhere.”</span>
+        </button>
+        <button class="answer-choice q3" id="q3a4" data-character="tiana">
+          <img src="assets/hardwork.gif" alt="Quote" />
+          <span
+            >“The only way to get what you want in this world is through hard
+            work.”</span
+          >
+        </button>
       </div>
 
-      <h2>4. The most important quality I look for in a prince is:</h2>
+      <h2>What’s your dream job?</h2>
       <div class="question">
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Adventure" />
-          <button id="q4a1" class="q4" data-character="ariel">
-            A. A sense of adventure and open-mindedness (Wants someone who
-            embraces new worlds)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Intelligence" />
-          <button id="q4a2" class="q4" data-character="belle">
-            B. Intelligence and deep conversation (Values brains and soul more
-            than looks)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Honor" />
-          <button id="q4a3" class="q4" data-character="mulan">
-            C. Honor, courage, and reliability (Needs someone to stand by her
-            side in battle and life)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Drive" />
-          <button id="q4a4" class="q4" data-character="tiana">
-            D. Drive and shared goals (Wants a partner who will build a life
-            with her)
-          </button>
-        </div>
+        <button class="answer-choice q4" id="q4a1" data-character="ariel">
+          <img src="assets/scuba.gif" alt="Marine Biologist" />
+          <span> Marine biologist or scuba diver</span>
+        </button>
+        <button class="answer-choice q4" id="q4a2" data-character="mulan">
+          <img src="assets/karate.gif" alt="Soldier" />
+          <span> Soldier or martial arts instructor</span>
+        </button>
+        <button class="answer-choice q4" id="q4a3" data-character="belle">
+          <img src="assets/writer.gif" alt="Librarian" />
+          <span> Librarian or writer</span>
+        </button>
+        <button class="answer-choice q4" id="q4a4" data-character="tiana">
+          <img src="assets/chef.gif" alt="Chef" />
+          <span> Chef or entrepreneur</span>
+        </button>
       </div>
 
-      <h2>5. Pick a Disney movie to watch with your closest friends:</h2>
+      <h2>Choose a color palette:</h2>
       <div class="question">
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Moana" />
-          <button id="q5a1" class="q5" data-character="ariel">
-            A. Moana (Ocean adventure, self-discovery, courage)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Beauty and the Beast" />
-          <button id="q5a2" class="q5" data-character="belle">
-            B. Beauty and the Beast (Classic romance and depth)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="Raya" />
-          <button id="q5a3" class="q5" data-character="mulan">
-            C. Raya and the Last Dragon (Warrior journey, trust, loyalty)
-          </button>
-        </div>
-        <div class="answer-choice">
-          <img src="assets/cat.jpg" alt="The Princess and the Frog" />
-          <button id="q5a4" class="q5" data-character="tiana">
-            D. The Princess and the Frog (Hard work, dreams, and magic)
-          </button>
-        </div>
+        <button class="answer-choice q5" id="q5a1" data-character="ariel">
+          <img src="assets/blue.jpg" alt="Ocean Colors" />
+          <span> Ocean blues and greens</span>
+        </button>
+        <button class="answer-choice q5" id="q5a2" data-character="mulan">
+          <img src="assets/red.jpg" alt="Earth Tones" />
+          <span> Deep reds and earthy tones</span>
+        </button>
+        <button class="answer-choice q5" id="q5a3" data-character="belle">
+          <img src="assets/yellow.jpg" alt="Warm Neutrals" />
+          <span> Warm yellows and neutrals</span>
+        </button>
+        <button class="answer-choice q5" id="q5a4" data-character="tiana">
+          <img src="assets/green.jpg" alt="Fresh Greens" />
+          <span> Vibrant greens and bold contrasts</span>
+        </button>
       </div>
 
-      <div>
-        <button id="displayResult">What kind of a person am I?</button>
-        <h2 id="result">Your result is...</h2>
+      <button id="displayResult">What kind of a person am I?</button>
+      <div id="results-container">
+        <h2 id="result" style="display: none">Your result is...</h2>
+        <p id="resultDescription" style="display: none">
+          Based on your answers, this Disney princess shares your values and
+          personality traits!
+        </p>
+        <button id="shareResult">Share Results</button>
       </div>
       <button id="restart">Restart</button>
     </main>

@@ -112,7 +112,7 @@ async function shareResult() {
   try {
     await navigator.share({
       title: "Disney Princess Quiz",
-      url: "https://example.com",
+      url: "https://disneyprincessquiz.vercel.app/",
       text: `I took this Disney Princess Quiz and I'm most like ${winner}!`,
     });
     console.log("Shared successfully");
